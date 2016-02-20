@@ -6,23 +6,13 @@
 		<div>
 			<h1><a href="">Django Girls' Blog</a></h1>
 		</div>
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href="">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaks }}</p>
+			</div>
+		{% endfor %}
 
-		<div>
-			<p>published: 20.02.2016, 11:54</p>
-			<h2><a href="">Post A</a></h2>
-			<p>When the cabin portholes are dark and green because of the seas outside, when the ship goes wop with a wiggle between and the trunks begin to slide...</p>
-		</div>
-
-		<div>
-			<p>published: 20.02.2016, 11.56</p>
-			<h2><a href="">Post B</a></h2>
-			<p> ... when nursey lies on the floor in a heap and mummy begs you to let her sleep, and you aren't waked or washed or dressed; why then you will <em>know</em> if you haven't <strong>guessed</strong> ...</p>
-		</div>
-
-		<div>
-			<p>published: 20.02.2016, 11.58</p>
-			<h2><a href="">Post C</a></h2>
-			<p> ... you're 50 North and 40 West!</p>
-		</div>
 	</body>
 </html>
